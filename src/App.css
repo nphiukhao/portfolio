@@ -1,38 +1,433 @@
-.App {
-  text-align: center;
-}
+/*  
+font-family: 'Share Tech Mono', monospace;
+font-family: 'Share Tech', sans-serif;
+font-family: ''Didact Gothic', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
+  */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: #D6D6D6;
+    
   }
+/* -------------------------- Nav stuff -------------------------- */
+body {
+    overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+nav {
+    min-height: 7vh;
+    font-family: 'Share Tech Mono', monospace;
+    background-color:#8A6060;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links{
+    position: absolute;
+    top:7vh;
+    background-color:  #8A6060;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 93vh;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    
 }
 
-@keyframes App-logo-spin {
+.nav-links li {
+    opacity: 0;
+}
+.nav-active{
+    position: absolute;
+    top:7vh;
+    background-color:  #8A6060;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 93vh;
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+}
+
+.nav-active li:hover {
+  animation: bounce 500ms infinite alternate;
+  -webkit-animation: bounce 500ms infinite alternate;
+}
+
+@keyframes bounce {
   from {
-    transform: rotate(0deg);
+    transform: translateY(0px);
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(-5px);
   }
 }
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+/* .nav-active li {
+  animation: navLinksFade 0.5s ease forwards 7s;
+}
+
+@keyframes navLinksFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+} */
+
+.nav-links li, .nav-active li{
+    list-style: none;
+ }
+ .nav-links a,  .nav-active a {
+     text-decoration: none;
+     letter-spacing: 2px;
+     
+     font-size: 18px;
+     color: white;
+ }
+ 
+ .burger-container{
+     display: flex;
+     align-items: center; 
+ }
+ .burger{
+
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+ .burger div{
+    width: 27px;
+    height: 4px;
+    background-color:#ECECEC;
+    margin: 5px;
+}
+
+
+
+/*---------------------------- Main page ------------------------ */
+
+.seeWork{
+    position: absolute;
+    bottom: 18vh;
+    display: block;
+    font-size: 22px;
+    font-family: 'Didact Gothic', sans-serif;
+    text-decoration: none;
+    color: #8A6060;
+    border-width: 2px;
+    border-style: solid;
+    padding: .2em 1.1em .5em 1.1em;
+    cursor: pointer;
+    border-color: #C4AAAA;
+    background-color: #8A6060;
+    color: #ECECEC;
+    margin-top: 2rem;
+    font-weight: 500;
+    animation: bounce 500ms infinite alternate;
+    -webkit-animation: bounce 500ms infinite alternate;
+
+}
+
+.seeWork:hover {
+  border-color: #8A6060;
+  background-color: #C4AAAA;
+  color: #3D3D3D;
+  transition: all ease-in-out 300ms;
+}
+
+
+.hero-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Share Tech Mono', monospace;
+ 
+}
+
+
+.newLine {
+    display: block;
+}
+
+header{
+    width: 80%;
+    font-size: .8rem;
+
+}
+
+
+/* -------------------------------- About me ----------------*/
+
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2{
+    font-family: 'Share Tech', sans-serif;
+    padding: 20px;
+}
+
+.green{
+    color: #C4AAAA;
+    padding: 10px;
+}
+.about-container, .project-container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.project-container {
+  background-color: #573D3D;
+}
+
+p{
+    padding: 10px 30px;
+    font-family: 'Didact Gothic', sans-serif;
+    line-height: 25px;
+    letter-spacing: .8px;
+    width: 100%;
+    font-size: 18px;
+
+}
+.passion, .enjoy{
+    color: #C4AAAA;
+}
+
+
+/* ------------------------ projects --------------------------*/
+img {
+    width: 100%;
+    padding: 20px 5px;
+}
+
+.mobilescreenshot{
+    width: 40%;
+}
+
+
+h3 {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 20px;
+  color: #C4AAAA;
+  margin: 15px auto;
+  padding-top: 50px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #C4AAAA;
+}
+
+/* .project1{
+  padding-right: 50px;
+} */
+
+.projectLinks{
+    width: 100%;
+}
+.projectLinks a {
+    text-decoration: none; 
+    padding: auto;
+    background-color: #8A6060;
+    display: inline-block;
+    width: 25%;
+    font-size: 20px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: #ECECEC;
+    padding: .3em .2em;
+    margin: 1em 1em;
+    letter-spacing: 1.1px;
+    border: solid 1.5px #C4AAAA;
+}
+.projectLinks a:hover {
+    border-color: #8A6060;
+    background-color: #C4AAAA;
+    color: #3D3D3D;
+    transition: all ease-in-out 300ms;
+}
+
+/* -------------------- footer --------------------------*/
+
+footer {
+    background-color: #8A6060;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ghlogo, .linklogo{
+  width: 40px;
+    }
+.elogo{
+    padding: 20px 5px;
+    width: 45px;
+}
+.ghlogo, .linklogo, .elogo{
+    margin: 1rem 1rem;
+
+}
+
+/* ------------------- media queries -------------------- */
+
+@media (min-width:650px) {
+
+    .burger{
+        display: none;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    h3{
+        font-size: 25px;
+    }
+    .nav-links{
+        top:7vh;
+        background-color:  #8A6060;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        transform: translateX(0px);
+        height: 7vh;
+        position: static;
+        width: 100%;
+
+    }
+
+    .nav-links li {
+        opacity: 1;
+    }
+
+    .nav-links a { 
+        font-size: 18px;
+        color: white;
+    }
+
+    header{
+        font-size: 1.25rem;
+    }
+
+    p{
+        margin: 0;
+    }
+    .paragraphs{
+        width: 70%;
+        border: 2px solid #8A6060;
+    }
+  
+   .projectLinks a{
+       width: 20%;
+       padding: .6em .3em;
+
+   }
+   .elogo, .ghlogo, .linklogo{
+    width: 40px;
+    }
+   .p-explain{
+       width: 70%;
+       margin: auto;
+   }
+
+
+
+    
+
+
+}
+
+
+@media (min-width:950px){
+    .paragraphs{
+        width: 45%;
+    }
+
+    .seeWork {
+        width: 250px;
+        height: 55px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    h2{
+      font-size: 40px;
+    }
+
+    .elogo, .ghlogo, .linklogo{
+       width: 50px;
+       }
+    
+    .screenshot-container{
+        width: 100%;
+        display: inline-block;
+    }
+
+    
+    .mobilescreenshot, .fullscreenshot{
+     height: 450px;
+    width: auto;
+    }
+    h3{
+      font-size: 28px;
+    }
+
+    .projectLinks a{
+        width: 15%;
+        padding: .6em .3em;
+ 
+    }
+
+ 
+}
+@media (min-width:1230px){
+    .mobilescreenshot, .fullscreenshot{
+        height: 550px;
+       width: auto;
+    }
+    .project-container{
+      width:100%;
+    }
+
+
+}
+
