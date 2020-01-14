@@ -7,6 +7,9 @@ import AlgorithMeFullscreen from '../Images/AlgorithMe_fullscreen.png'
 import AlgorithMeMobile from '../Images/AlgorithMe_mobile.png'
 import ICookFullscreen from '../Images/ICook_fullscreen.png'
 import ICookMobile from '../Images/ICook_mobile.png'
+import FindpetsFullscreen from '../Images/findpets_fullscreen.png'
+import FindpetsMobile from '../Images/findpets_mobile.png'
+
 
 
 export default function Projects() {
@@ -16,8 +19,8 @@ export default function Projects() {
 
           <h3>Chore Runner</h3>
           <div className="screenshot-container">
-                  <img className="fullscreenshot" src={ChoreRunnerFullscreen} alt="Browser screenshot of My Bookmarks App"/>
-                  <img className= "mobilescreenshot" src={ChoreRunnerMobile} alt="Mobile screenshot of My Bookmarks App"/>
+                  <img className="fullscreenshot" src={ChoreRunnerFullscreen} alt="Browser screenshot of Chore Runner"/>
+                  <img className= "mobilescreenshot" src={ChoreRunnerMobile} alt="Mobile screenshot of Chore Runner"/>
           </div>
           <section role="document">
 
@@ -34,8 +37,8 @@ export default function Projects() {
 
           <h3>AlgorithMe</h3>
           <div className="screenshot-container">
-                  <img className="fullscreenshot" src={AlgorithMeFullscreen} alt="Browser screenshot of My Bookmarks App"/>
-                  <img className= "mobilescreenshot" src={AlgorithMeMobile} alt="Mobile screenshot of My Bookmarks App"/>
+                  <img className="fullscreenshot" src={AlgorithMeFullscreen} alt="Browser screenshot of Algorithme"/>
+                  <img className= "mobilescreenshot" src={AlgorithMeMobile} alt="Mobile screenshot of Algorithme"/>
           </div>
           <section role="document">
               <p className="p-explain">Responsive educational application build using a Linked List data structure and spaced repetition algorithm. Users can learn basic<span className="green">javascript algorithms</span>such as<span className="green">search and sort algorithms.</span></p>
@@ -44,6 +47,20 @@ export default function Projects() {
                   <a href='https://algorith-me.now.sh/' target="_blank" rel="noopener noreferrer">Live</a>
               </div>
               <p><span className="green">Built using: React, React Router, HTML5, CSS3, Node, Express, PostgreSQL, Mocha, Chai, Enzyme, Jest, Cypress</span></p>
+          </section>
+
+          <h3>Find Pets</h3>
+          <div className="screenshot-container">
+                  <img className="fullscreenshot" src={FindpetsFullscreen} alt="Browser screenshot of Find Pets App"/>
+                  <img className= "mobilescreenshot" src={FindpetsMobile} alt="Mobile screenshot of Find Pets App"/>
+          </div>
+          <section role="document">
+              <p className="p-explain">Find Pets is a cat and dog adoption application built with a queue data structure. Users can enter into an adoption queue and adopt the next up cat or dog. This was built with the intention of ensuring that the animals that have an at the shelter the longest get a loving home first.</p>
+              <div className="projectLinks">
+                  <a href='https://github.com/nphiukhao/findpets-client' target="_blank" rel="noopener noreferrer">Github</a>
+                  <a href='https://findpets.now.sh/' target="_blank" rel="noopener noreferrer">Live</a>
+              </div>
+              <p><span className="green">Built using: React, React Router, HTML5, CSS3, Node, Express, Jest</span></p>
           </section>
 
           <h3>ICook</h3>
