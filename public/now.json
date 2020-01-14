@@ -1,7 +1,7 @@
 {
     "version": 2,
-    "alias": "cn-phiukhao",
-    "name": "cn-phiukhao",
+    "alias": "cnphiukhao",
+    "name": "cnphiukhao",
     "routes": [
         { "handle": "filesystem" },
         { "src": "/.*", "dest": "/index.html" }
