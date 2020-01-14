@@ -25,7 +25,7 @@ export default function Projects() {
             <p className="p-explain">Kid users can<span className="green">see their tasks, clear them,</span>and, once they're approved,<span className="green">earn points and badges</span>to compete with other members in the household.</p>
               <div className="projectLinks">
                   <a href='https://github.com/nphiukhao/Chorerunner-client' target="_blank" rel="noopener noreferrer">Github</a>
-                  <a href='http://chorerunner-client.now.sh' target="_blank" rel="noopener noreferrer">Live</a>
+                  <a href='https://chore-runner.now.sh/' target="_blank" rel="noopener noreferrer">Live</a>
               </div>
               <p><span className="green">Built using: React, React Router, HTML5, CSS3, Node, Express, PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator</span></p>
           </section>
@@ -40,8 +40,8 @@ export default function Projects() {
           <section role="document">
               <p className="p-explain">Responsive educational application build using a Linked List data structure and spaced repetition algorithm. Users can learn basic<span className="green">javascript algorithms</span>such as<span className="green">search and sort algorithms.</span></p>
               <div className="projectLinks">
-                  <a href='https://github.com/thinkful-ei-gecko/nancy-scott-spaced-repetition-client' target="_blank" rel="noopener noreferrer">Github</a>
-                  <a href='https://algorithme.now.sh/' target="_blank" rel="noopener noreferrer">Live</a>
+                  <a href='https://github.com/nphiukhao/algorithme-client' target="_blank" rel="noopener noreferrer">Github</a>
+                  <a href='https://algorith-me.now.sh/' target="_blank" rel="noopener noreferrer">Live</a>
               </div>
               <p><span className="green">Built using: React, React Router, HTML5, CSS3, Node, Express, PostgreSQL, Mocha, Chai, Enzyme, Jest, Cypress</span></p>
           </section>
