@@ -279,10 +279,6 @@ h3 {
     transition: all ease-in-out 300ms;
 }
 
-/* ------ special case -----*/
-.icook-doc{
-    width:100%;
-}
 
 
 /* -------------------- footer --------------------------*/
@@ -432,6 +428,9 @@ footer {
     }
     .project-container{
       width:100%;
+    }
+    .project-info{
+        width: 1230px;
     }
 
 
