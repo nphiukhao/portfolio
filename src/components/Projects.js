@@ -68,7 +68,7 @@ export default function Projects() {
                   <img className="fullscreenshot" src={ICookFullscreen} alt="Browser screenshot of My Bookmarks App"/>
                   <img className= "mobilescreenshot" src={ICookMobile} alt="Mobile screenshot of My Bookmarks App"/>
           </div>
-          <section role="document">
+          <section className='icook-doc' role="document">
               <p className="p-explain"> Users can store, update, and filter recipes based on time constraints and available ingredients.<span className="green">Save time, money,</span>and<span className="green">headaches.</span></p>
               <div className="projectLinks">
                   <a href='https://github.com/nphiukhao/ICook-App-client' target="_blank" rel="noopener noreferrer">Github</a>
