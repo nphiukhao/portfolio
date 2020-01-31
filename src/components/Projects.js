@@ -171,7 +171,6 @@ export default function Projects() {
       </div>
       <section className="project-info" role="document">
         <p className="p-explain">
-          {" "}
           Users can store, update, and filter recipes based on time constraints
           and available ingredients.
           <span className="green">Save time, money,</span>and
@@ -199,6 +198,7 @@ export default function Projects() {
             PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator
           </span>
         </p>
+        <p>ICook 2.0 with third-party API coming soon...</p>
       </section>
 
       <h3>My Bookmarks App</h3>
