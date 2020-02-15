@@ -35,6 +35,7 @@ export default class NavBar extends Component {
             </a>
           </li>
         </ul>
+        
         <div className="burger-container">
           <div
             className="burger"
