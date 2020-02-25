@@ -1,6 +1,6 @@
 import React from "react";
-import BookmarkFullscreen from "../Images/BookmarkFullscreen.png";
-import BookmarkMobile from "../Images/BookmarkMobile.png";
+// import BookmarkFullscreen from "../Images/BookmarkFullscreen.png";
+// import BookmarkMobile from "../Images/BookmarkMobile.png";
 import ChoreRunnerFullscreen from "../Images/ChoreRunner_fullscreen.png";
 import ChoreRunnerMobile from "../Images/ChoreRunner_mobile.png";
 import AlgorithMeFullscreen from "../Images/AlgorithMe_fullscreen.png";
@@ -200,7 +200,7 @@ export default function Projects() {
         </p>
         <p>ICook 2.0 with third-party API coming soon...</p>
       </section>
-
+{/* 
       <h3>My Bookmarks App</h3>
       <div className="screenshot-container">
         <img
@@ -242,7 +242,7 @@ export default function Projects() {
             Built using: HTML, CSS, Javascript, jQuery
           </span>
         </p>
-      </section>
+      </section> */}
     </section>
   );
 }
