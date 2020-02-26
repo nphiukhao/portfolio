@@ -1,14 +1,15 @@
 import React from "react";
 // import BookmarkFullscreen from "../Images/BookmarkFullscreen.png";
 // import BookmarkMobile from "../Images/BookmarkMobile.png";
-import ChoreRunnerFullscreen from "../Images/ChoreRunner_fullscreen.png";
-import ChoreRunnerMobile from "../Images/ChoreRunner_mobile.png";
-import AlgorithMeFullscreen from "../Images/AlgorithMe_fullscreen.png";
-import AlgorithMeMobile from "../Images/AlgorithMe_mobile.png";
-import ICookFullscreen from "../Images/ICook_fullscreen.png";
-import ICookMobile from "../Images/ICook_mobile.png";
-import FindpetsFullscreen from "../Images/findpets_fullscreen.png";
-import FindpetsMobile from "../Images/findpets_mobile.png";
+import ChoreRunnerFullscreen from "../../Images/ChoreRunner_fullscreen.png";
+import ChoreRunnerMobile from "../../Images/ChoreRunner_mobile.png";
+import AlgorithMeFullscreen from "../../Images/AlgorithMe_fullscreen.png";
+import AlgorithMeMobile from "../../Images/AlgorithMe_mobile.png";
+import ICookFullscreen from "../../Images/ICook_fullscreen.png";
+import ICookMobile from "../../Images/ICook_mobile.png";
+import FindpetsFullscreen from "../../Images/findpets_fullscreen.png";
+import FindpetsMobile from "../../Images/findpets_mobile.png";
+import "./Projects.css";
 
 export default function Projects() {
   return (
@@ -17,6 +18,34 @@ export default function Projects() {
         <span className="green">[</span>My Projects
         <span className="green">]</span>
       </h2>
+
+      <div className="project-1">
+        <div className="slider-container">
+          <a href="#i1"> </a>
+          <a href="#i1"> </a>
+
+          <div className='slides'>
+            <div className="slide-img" id="i1">
+              <img
+                // className="fullscreenshot"
+                src={ChoreRunnerFullscreen}
+                alt="Browser screenshot of Chore Runner"
+              />
+            </div>
+            <div className="slide-img" id="i2">
+              <img
+                // className="mobilescreenshot"
+                src={ChoreRunnerMobile}
+                alt="Mobile screenshot of Chore Runner"
+              />
+            </div>
+          </div>
+        </div>
+
+        <h3>Project title</h3>
+        <p>description</p>
+        <p>tech stack</p>
+      </div>
 
       <h3>Chore Runner</h3>
       <div className="screenshot-container">
@@ -200,7 +229,7 @@ export default function Projects() {
         </p>
         <p>ICook 2.0 with third-party API coming soon...</p>
       </section>
-{/* 
+      {/* 
       <h3>My Bookmarks App</h3>
       <div className="screenshot-container">
         <img
