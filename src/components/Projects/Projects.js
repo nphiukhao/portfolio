@@ -64,7 +64,7 @@ export default class Projects extends Component {
             />
           </div>
           <div className="card-text">
-            <h4>ChoreRunner <FontAwesomeIcon className='card-icon' icon={faExternalLinkAlt} size="1x"/></h4>
+    <h4>ChoreRunner {/*<FontAwesomeIcon className='card-icon' icon={faExternalLinkAlt} size="1x"/>*/}</h4>
             <p>
               Built using: React, React Router, HTML5, CSS3, Node, Express,
               PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator
