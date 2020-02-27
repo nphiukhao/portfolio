@@ -11,9 +11,10 @@ font-family: 'Didact Gothic', sans-serif;
   padding: 0px;
   /* color: #D6D6D6; */
 }
+
 /* -------------------------- Nav stuff -------------------------- */
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 nav {

@@ -15,24 +15,8 @@ import "./Projects.css";
 
 export default class Projects extends Component {
 
-  state = {
-    showMProject1: false,
-    showMProject2: false,
-    showMProject3: false,
-    showMProject4: false,
-  }
-  showModal = (project) => {
-    console.log('toggleModal fn firing', project)
-    this.setState({[project]: true})
-  }
-
-  closeModal = (project) => {
-    console.log('closing')
-    this.setState({ [project]: false})
-  }
 
   render() {
-    console.log('state is', this.state)
     return (
       <section id="projects" className="project-container">
       <h2>
@@ -40,7 +24,7 @@ export default class Projects extends Component {
         <span className="green">]</span>
       </h2>
       {/* ------------ slider -------------  */}
-      <div className="project-1">
+      {/* <div className="project-1">
         <div className="slider-container">
           <div className="slides">
             <div className="slide-img" id="i1">
@@ -65,10 +49,10 @@ export default class Projects extends Component {
         <h3>Project title</h3>
         <p>description</p>
         <p>tech stack</p>
-      </div>
+      </div> */}
       {/* -------------------------  */}
 
-      <button onClick={() => this.showModal('showMProject1')}>
+      <button onClick={() => this.props.showModal('showMProject1')}>
         <div className="card">
           <div className="card-img">
             <img
@@ -86,7 +70,7 @@ export default class Projects extends Component {
           </div>
         </div>
       </button>
-      {this.state.showMProject1 ? <Project1Modal closeModal={this.closeModal}/> : null}
+      {this.props.showMProject1 ? <Project1Modal closeModal={this.props.closeModal}/> : null}
     
       <h3>Chore Runner</h3>
       <div className="screenshot-container">

@@ -1,8 +1,10 @@
 .modal{
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: rgba(0, 0, 0, 0.7);
     border: 1px solid #ccc;
     transition: 1.1s ease-out;
     box-shadow: 
@@ -11,4 +13,6 @@
     transform: scale(1);  
     opacity: 1;
     visibility: visible;
+    overflow-y: auto;
+    z-index: 2;
 }
