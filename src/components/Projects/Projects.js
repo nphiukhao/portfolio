@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react';
 // import BookmarkFullscreen from "../Images/BookmarkFullscreen.png";
 // import BookmarkMobile from "../Images/BookmarkMobile.png";
 import ChoreRunnerFullscreen from "../../Images/ChoreRunner_fullscreen.png";
@@ -9,22 +9,40 @@ import ICookFullscreen from "../../Images/ICook_fullscreen.png";
 import ICookMobile from "../../Images/ICook_mobile.png";
 import FindpetsFullscreen from "../../Images/findpets_fullscreen.png";
 import FindpetsMobile from "../../Images/findpets_mobile.png";
+import Project1Modal from "./Project1Modal"
 import "./Projects.css";
 
-export default function Projects() {
-  return (
-    <section id="projects" className="project-container">
+
+export default class Projects extends Component {
+
+  state = {
+    showMProject1: false,
+    showMProject2: false,
+    showMProject3: false,
+    showMProject4: false,
+  }
+  showModal = (project) => {
+    console.log('toggleModal fn firing', project)
+    this.setState({[project]: true})
+  }
+
+  closeModal = (project) => {
+    console.log('closing')
+    this.setState({ [project]: false})
+  }
+
+  render() {
+    console.log('state is', this.state)
+    return (
+      <section id="projects" className="project-container">
       <h2>
         <span className="green">[</span>My Projects
         <span className="green">]</span>
       </h2>
-
+      {/* ------------ slider -------------  */}
       <div className="project-1">
         <div className="slider-container">
-          <a href="#i1"> </a>
-          <a href="#i1"> </a>
-
-          <div className='slides'>
+          <div className="slides">
             <div className="slide-img" id="i1">
               <img
                 // className="fullscreenshot"
@@ -34,19 +52,42 @@ export default function Projects() {
             </div>
             <div className="slide-img" id="i2">
               <img
-                // className="mobilescreenshot"
+                className="mobilescreenshot"
                 src={ChoreRunnerMobile}
                 alt="Mobile screenshot of Chore Runner"
               />
             </div>
           </div>
+          <a href="#i1"> </a>
+          <a href="#i2"> </a>
         </div>
 
         <h3>Project title</h3>
         <p>description</p>
         <p>tech stack</p>
       </div>
+      {/* -------------------------  */}
 
+      <button onClick={() => this.showModal('showMProject1')}>
+        <div className="card">
+          <div className="card-img">
+            <img
+              // className="fullscreenshot"
+              src={ChoreRunnerFullscreen}
+              alt="Browser screenshot of Chore Runner"
+            />
+          </div>
+          <div className="card-text">
+            <h4>ChoreRunner</h4>
+            <p>
+              Built using: React, React Router, HTML5, CSS3, Node, Express,
+              PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator
+            </p>
+          </div>
+        </div>
+      </button>
+      {this.state.showMProject1 ? <Project1Modal closeModal={this.closeModal}/> : null}
+    
       <h3>Chore Runner</h3>
       <div className="screenshot-container">
         <img
@@ -273,5 +314,7 @@ export default function Projects() {
         </p>
       </section> */}
     </section>
-  );
+    )
+  }
 }
+
