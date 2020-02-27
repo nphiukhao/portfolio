@@ -65,9 +65,8 @@
   background: rgba(255, 255, 255, 0.623);
 } */
 
-
-.slider-container{
-  width: 300px;
+.slider-container {
+  width: 100%;
   text-align: center;
   overflow: hidden;
 }
@@ -77,7 +76,7 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-
+  margin: 0 5px;
 }
 
 .slides::-webkit-scrollbar {
@@ -89,14 +88,14 @@
   border-radius: 10px;
 }
 
-.mobilescreenshot{
+.mobilescreenshot {
   height: 300px;
   width: auto;
 }
 .slides > div {
   scroll-snap-align: start;
   flex-shrink: 0;
-  width: 300px;
+  width: 100%;
   /* height: 300px; */
   margin-right: 50px;
   border-radius: 10px;
@@ -104,12 +103,12 @@
   transform: scale(1);
   transition: transform 0.5s;
   position: relative;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 100px;
-  padding-top: 100px; /* //need because a href moves to top of div */
+  padding-top: 50px; /* //need because a href moves to top of div */
 }
 
 .slider-container a {
@@ -121,7 +120,6 @@
   border-radius: 50%;
   margin: 15px 5px;
   position: relative;
-
 }
 
 /* .slider-container a:active {
@@ -131,16 +129,16 @@
   background: #000;
 } */
 
-.card{
+.card {
   width: 300px;
   height: 300px;
   border: white solid 1px;
   border-radius: 10px;
   overflow: hidden;
 }
-.card-img{
-  background: grey;
-  height: 75%;
+.card-img {
+  /* background: grey; */
+  height: 70%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -151,6 +149,29 @@
 }
 
 .card-text {
-  height: 25%;
-  
+  height: 30%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.card-text > h4 {
+  color: white;
+  font-size: 20px;
+  font-family: "Share Tech", sans-serif;
+  padding-left: 10px;
+
+}
+
+.card-text p {
+  font-family: "Didact Gothic", sans-serif;
+  line-height: 1.2;
+  width: 100%;
+  font-size: 13px;
+  padding: 0 5px 5px 10px;
+}
+
+.card-icon {
+  float: right;
+  margin-right: 10px;
 }

@@ -10,6 +10,8 @@ import ICookMobile from "../../Images/ICook_mobile.png";
 import FindpetsFullscreen from "../../Images/findpets_fullscreen.png";
 import FindpetsMobile from "../../Images/findpets_mobile.png";
 import Project1Modal from "./Project1Modal"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import "./Projects.css";
 
 
@@ -62,7 +64,7 @@ export default class Projects extends Component {
             />
           </div>
           <div className="card-text">
-            <h4>ChoreRunner</h4>
+            <h4>ChoreRunner <FontAwesomeIcon className='card-icon' icon={faExternalLinkAlt} size="1x"/></h4>
             <p>
               Built using: React, React Router, HTML5, CSS3, Node, Express,
               PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator
