@@ -132,9 +132,16 @@
 .card {
   width: 300px;
   height: 300px;
-  border: white solid 1px;
+  /* border: white solid 1px; */
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 0px 70px 0 rgba(0,0,0,0.34),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.card-button{
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .card-img {
   /* background: grey; */
@@ -174,4 +181,5 @@
 .card-icon {
   float: right;
   margin-right: 10px;
+  cursor: pointer;
 }
