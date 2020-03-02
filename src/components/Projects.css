@@ -1,69 +1,3 @@
-/* .project-1 {
-  width: 100%;
-}
-.slider-container {
-  margin: 0 auto;
-  margin-top: 20px;
-  position: relative;
-  width: 100%;
-  height:210px;
-  padding-bottom: 40%;
-  border: solid 2px grey;
-}
-
-.slide-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.slide-img img {
-  height: 210px;
-  width: auto;
-}
-
-#i1,
-#i2,
-#i3 {
-  display: none;
-}
-.pre, .nxt {
-  width: 12%;
-  height:100%;
-  position: absolute;
-  top:0;
-  background-color: rgb(24, 24, 24, .4);
-  z-index: 99;
-  cursor: pointer;
-}
-
-.pre{
-  left:0;
-}
-.nxt{
-  right:0
-}
-
-.nav{
-  width: 100%;
-  height: 11px;
-  bottom: 12%;
-  position: absolute;
-  text-align: center;
-  z-index: 99;
-
-}
-
-.dots{
-  top:-5%;
-  width: 10px;
-  height:10px;
-  margin: 0 4px;
-  position: relative;
-  border-radius: 50%;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.623);
-} */
 
 .slider-container {
   width: 100%;
@@ -86,6 +20,10 @@
 .slides::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
+}
+.fullscreenshot{
+  height: auto;
+  width: 100%;
 }
 
 .mobilescreenshot {
@@ -122,22 +60,30 @@
   position: relative;
 }
 
-/* .slider-container a:active {
-  top: 1px;
-}
-.slider-container a:focus {
-  background: #000;
-} */
+.card-container {
+  display: flex;
+  flex-direction: column;
 
+}
 .card {
   width: 300px;
   height: 300px;
   /* border: white solid 1px; */
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0px 70px 0 rgba(0,0,0,0.34),0 17px 50px 0 rgba(0,0,0,0.19);
+  margin: 25px 0;
+  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.34),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.card-button{
+
+.card:hover {
+  box-shadow: 0 0px 70px 0 rgba(0, 0, 0, 0.34),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  width: 310px;
+  height: 310px;
+  transition: 0.3s;
+}
+.card-button {
   text-decoration: none;
   background: none;
   border: none;
@@ -157,17 +103,15 @@
 
 .card-text {
   height: 30%;
-  text-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  text-align: left;
+  padding: 5px 0;
 }
 .card-text > h4 {
   color: white;
   font-size: 20px;
   font-family: "Share Tech", sans-serif;
   padding-left: 10px;
-
+  padding-bottom: 5px;
 }
 
 .card-text p {
@@ -182,4 +126,55 @@
   float: right;
   margin-right: 10px;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .card{
+    width: 400px;
+    height: 350px;
+  }
+  .card:hover {
+    box-shadow: 0 0px 70px 0 rgba(0, 0, 0, 0.34),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    width: 410px;
+    height: 360px;
+  }
+  .close {
+    margin-right: 15px;
+  }
+
+  .card-text > h4 {
+    font-size: 25px;
+
+  }
+  
+  .card-text p {
+    font-size: 17px;
+  }
+
+  .mobilescreenshot {
+    height: 500px;
+    width: auto;
+  }
+  
+}
+
+
+@media (min-width: 950px) {
+
+  .card-container {
+    display: grid;
+    width: 900px;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+  .card-button {
+    margin: auto;
+  }
+
+  /* .fullscreenshot{
+    height: 500px;
+    width: auto;
+  } */
+  
 }

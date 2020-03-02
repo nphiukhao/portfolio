@@ -1,30 +1,30 @@
 import React from "react";
-import ChoreRunnerFullscreen from "../../Images/ChoreRunner_fullscreen.png";
-import ChoreRunnerMobile from "../../Images/ChoreRunner_mobile.png";
+import FindpetsFullscreen from "../../Images/findpets_fullscreen.png";
+import FindpetsMobile from "../../Images/findpets_mobile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Modal.css";
 
-export default function Project1Modal(props) {
+export default function Project3Modal(props) {
   return (
     <>
       <div className="modal">
-        <h3>ChoreRunner</h3>
+        <h3>Find Pets</h3>
         <div className="project-1">
           <div className="slider-container">
             <div className="slides">
               <div className="slide-img" id="i1">
                 <img
-                  // className="fullscreenshot"
-                  src={ChoreRunnerFullscreen}
-                  alt="Browser screenshot of Chore Runner"
+                  className="fullscreenshot"
+                  src={FindpetsFullscreen}
+                  alt="Browser screenshot of Find Pets"
                 />
               </div>
               <div className="slide-img" id="i2">
                 <img
                   className="mobilescreenshot"
-                  src={ChoreRunnerMobile}
-                  alt="Mobile screenshot of Chore Runner"
+                  src={FindpetsMobile}
+                  alt="Mobile screenshot of Find Pets"
                 />
               </div>
             </div>
@@ -33,30 +33,22 @@ export default function Project1Modal(props) {
           </div>
           <section className="project-info" role="document">
             <p className="p-explain">
-              Chore Runner is a full stack react application that acts as a
-              gamified chore manager. Parents can
-              <span className="green">create households</span>and
-              <span className="green">
-                assign tasks to the kids or members.
-              </span>
-            </p>
-            <p className="p-explain">
-              Kid users can
-              <span className="green">see their tasks, clear them,</span>and,
-              once they're approved,
-              <span className="green">earn points and badges</span>
-              to compete with other members in the household.
+              Find Pets is a cat and dog adoption application built with a queue
+              data structure. Users can enter into an adoption queue and adopt
+              the next up cat or dog. This was built with the intention of
+              ensuring that the animals that have an at the shelter the longest
+              get a loving home first.
             </p>
             <div className="projectLinks">
               <a
-                href="https://github.com/nphiukhao/Chorerunner-client"
+                href="https://github.com/nphiukhao/findpets-client"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Github
               </a>
               <a
-                href="https://chore-runner.now.sh/"
+                href="https://findpets.now.sh/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -66,7 +58,7 @@ export default function Project1Modal(props) {
             <p>
               <span className="green">
                 Built using: React, React Router, HTML5, CSS3, Node, Express,
-                PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator
+                Jest
               </span>
             </p>
           </section>
@@ -75,9 +67,9 @@ export default function Project1Modal(props) {
 
       <button
         className="close"
-        onClick={() => props.closeModal("showMProject1")}
+        onClick={() => props.closeModal("showMProject3")}
       >
-        <FontAwesomeIcon className="ghlogo" icon={faTimes} size="4x"  />
+        <FontAwesomeIcon className="ghlogo" icon={faTimes} size="4x" />
       </button>
     </>
   );
