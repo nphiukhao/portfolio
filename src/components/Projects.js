@@ -1,206 +1,153 @@
-import React from "react";
-// import BookmarkFullscreen from "../Images/BookmarkFullscreen.png";
-// import BookmarkMobile from "../Images/BookmarkMobile.png";
+import React, { Component } from "react";
 import ChoreRunnerFullscreen from "../Images/ChoreRunner_fullscreen.png";
-import ChoreRunnerMobile from "../Images/ChoreRunner_mobile.png";
 import AlgorithMeFullscreen from "../Images/AlgorithMe_fullscreen.png";
-import AlgorithMeMobile from "../Images/AlgorithMe_mobile.png";
 import ICookFullscreen from "../Images/ICook_fullscreen.png";
-import ICookMobile from "../Images/ICook_mobile.png";
 import FindpetsFullscreen from "../Images/findpets_fullscreen.png";
-import FindpetsMobile from "../Images/findpets_mobile.png";
+import Project1Modal from "./ProjectModal/Project1Modal";
+import Project2Modal from "./ProjectModal/Project2Modal";
+import Project3Modal from "./ProjectModal/Project3Modal";
+import Project4Modal from "./ProjectModal/Project4Modal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import "./Projects.css";
 
-export default function Projects() {
-  return (
-    <section id="projects" className="project-container">
-      <h2>
-        <span className="green">[</span>My Projects
-        <span className="green">]</span>
-      </h2>
+export default class Projects extends Component {
+  render() {
+    return (
+      <section id="projects" className="project-container">
+        <h2>
+          <span className="green">[</span>My Projects
+          <span className="green">]</span>
+        </h2>
 
-      <h3>Chore Runner</h3>
-      <div className="screenshot-container">
-        <img
-          className="fullscreenshot"
-          src={ChoreRunnerFullscreen}
-          alt="Browser screenshot of Chore Runner"
-        />
-        <img
-          className="mobilescreenshot"
-          src={ChoreRunnerMobile}
-          alt="Mobile screenshot of Chore Runner"
-        />
-      </div>
-      <section className="project-info" role="document">
-        <p className="p-explain">
-          Chore Runner is a full stack react application that acts as a gamified
-          chore manager. Parents can
-          <span className="green">create households</span>and
-          <span className="green">assign tasks to the kids or members.</span>
-        </p>
-        <p className="p-explain">
-          Kid users can
-          <span className="green">see their tasks, clear them,</span>and, once
-          they're approved,<span className="green">earn points and badges</span>
-          to compete with other members in the household.
-        </p>
-        <div className="projectLinks">
-          <a
-            href="https://github.com/nphiukhao/Chorerunner-client"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="card-container">
+          <button
+            className="card-button"
+            onClick={() => this.props.showModal("showMProject1")}
           >
-            Github
-          </a>
-          <a
-            href="https://chore-runner.now.sh/"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className="card">
+              <div className="card-img">
+                <img
+                  src={ChoreRunnerFullscreen}
+                  alt="Browser screenshot of Chore Runner"
+                />
+              </div>
+              <div className="card-text">
+                <h4>
+                  Chore Runner
+                  <FontAwesomeIcon
+                    className="card-icon"
+                    icon={faArrowAltCircleRight}
+                    size="1x"
+                  />
+                </h4>
+                <p>
+                  Built using: React, React Router, HTML5, CSS3, Node, Express,
+                  PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator
+                </p>
+              </div>
+            </div>
+          </button>
+          {this.props.showMProject1 ? (
+            <Project1Modal closeModal={this.props.closeModal} />
+          ) : null}
+
+          <button
+            className="card-button"
+            onClick={() => this.props.showModal("showMProject2")}
           >
-            Live
-          </a>
+            <div className="card">
+              <div className="card-img">
+                <img
+                  src={AlgorithMeFullscreen}
+                  alt="Browser screenshot of AlgorithMe"
+                />
+              </div>
+              <div className="card-text">
+                <h4>
+                  AlgorithMe
+                  <FontAwesomeIcon
+                    className="card-icon"
+                    icon={faArrowAltCircleRight}
+                    size="1x"
+                  />
+                </h4>
+                <p>
+                  Built using: React, React Router, HTML5, CSS3, Node, Express,
+                  PostgreSQL, Mocha, Chai, Enzyme, Jest, Cypress
+                </p>
+              </div>
+            </div>
+          </button>
+          {this.props.showMProject2 ? (
+            <Project2Modal closeModal={this.props.closeModal} />
+          ) : null}
+
+          <button
+            className="card-button"
+            onClick={() => this.props.showModal("showMProject3")}
+          >
+            <div className="card">
+              <div className="card-img">
+                <img
+                  src={FindpetsFullscreen}
+                  alt="Browser screenshot of Find Pets"
+                />
+              </div>
+              <div className="card-text">
+                <h4>
+                  Find Pets
+                  <FontAwesomeIcon
+                    className="card-icon"
+                    icon={faArrowAltCircleRight}
+                    size="1x"
+                  />
+                </h4>
+                <p>
+                  Built using: React, React Router, HTML5, CSS3, Node, Express,
+                  Jest
+                </p>
+              </div>
+            </div>
+          </button>
+          {this.props.showMProject3 ? (
+            <Project3Modal closeModal={this.props.closeModal} />
+          ) : null}
+
+          <button
+            className="card-button"
+            onClick={() => this.props.showModal("showMProject4")}
+          >
+            <div className="card">
+              <div className="card-img">
+                <img
+                  src={ICookFullscreen}
+                  alt="Browser screenshot of ICook"
+                />
+              </div>
+              <div className="card-text">
+                <h4>
+                  ICook
+                  <FontAwesomeIcon
+                    className="card-icon"
+                    icon={faArrowAltCircleRight}
+                    size="1x"
+                  />
+                </h4>
+                <p>
+                  Built using: React, React Router, HTML5, CSS3, Node, Express,
+                  PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator
+                </p>
+              </div>
+            </div>
+          </button>
+          {this.props.showMProject4 ? (
+            <Project4Modal closeModal={this.props.closeModal} />
+          ) : null}
         </div>
-        <p>
-          <span className="green">
-            Built using: React, React Router, HTML5, CSS3, Node, Express,
-            PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator
-          </span>
-        </p>
-      </section>
 
-      <h3>AlgorithMe</h3>
-      <div className="screenshot-container">
-        <img
-          className="fullscreenshot"
-          src={AlgorithMeFullscreen}
-          alt="Browser screenshot of Algorithme"
-        />
-        <img
-          className="mobilescreenshot"
-          src={AlgorithMeMobile}
-          alt="Mobile screenshot of Algorithme"
-        />
-      </div>
-      <section className="project-info" role="document">
-        <p className="p-explain">
-          Responsive educational application build using a Linked List data
-          structure and spaced repetition algorithm. Users can learn basic
-          <span className="green">javascript algorithms</span>such as
-          <span className="green">search and sort algorithms.</span>
-        </p>
-        <div className="projectLinks">
-          <a
-            href="https://github.com/nphiukhao/algorithme-client"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-          <a
-            href="https://algorith-me.now.sh/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live
-          </a>
-        </div>
-        <p>
-          <span className="green">
-            Built using: React, React Router, HTML5, CSS3, Node, Express,
-            PostgreSQL, Mocha, Chai, Enzyme, Jest, Cypress
-          </span>
-        </p>
-      </section>
 
-      <h3>Find Pets</h3>
-      <div className="screenshot-container">
-        <img
-          className="fullscreenshot"
-          src={FindpetsFullscreen}
-          alt="Browser screenshot of Find Pets App"
-        />
-        <img
-          className="mobilescreenshot"
-          src={FindpetsMobile}
-          alt="Mobile screenshot of Find Pets App"
-        />
-      </div>
-      <section className="project-info" role="document">
-        <p className="p-explain">
-          Find Pets is a cat and dog adoption application built with a queue
-          data structure. Users can enter into an adoption queue and adopt the
-          next up cat or dog. This was built with the intention of ensuring that
-          the animals that have an at the shelter the longest get a loving home
-          first.
-        </p>
-        <div className="projectLinks">
-          <a
-            href="https://github.com/nphiukhao/findpets-client"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-          <a
-            href="https://findpets.now.sh/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live
-          </a>
-        </div>
-        <p>
-          <span className="green">
-            Built using: React, React Router, HTML5, CSS3, Node, Express, Jest
-          </span>
-        </p>
-      </section>
-
-      <h3>ICook</h3>
-      <div className="screenshot-container">
-        <img
-          className="fullscreenshot"
-          src={ICookFullscreen}
-          alt="Browser screenshot of My Bookmarks App"
-        />
-        <img
-          className="mobilescreenshot"
-          src={ICookMobile}
-          alt="Mobile screenshot of My Bookmarks App"
-        />
-      </div>
-      <section className="project-info" role="document">
-        <p className="p-explain">
-          Users can store, update, and filter recipes based on time constraints
-          and available ingredients.
-          <span className="green">Save time, money,</span>and
-          <span className="green">headaches.</span>
-        </p>
-        <div className="projectLinks">
-          <a
-            href="https://github.com/nphiukhao/ICook-App-client"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-          <a
-            href="https://icook.nphiukhao.now.sh"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live
-          </a>
-        </div>
-        <p>
-          <span className="green">
-            Built using: React, React Router, HTML5, CSS3, Node, Express,
-            PostgreSQL, Mocha, Chai, Enzyme, Jest, Adobe Illustrator
-          </span>
-        </p>
-        <p>ICook 2.0 with third-party API coming soon...</p>
-      </section>
-{/* 
+        {/* 
       <h3>My Bookmarks App</h3>
       <div className="screenshot-container">
         <img
@@ -243,6 +190,7 @@ export default function Projects() {
           </span>
         </p>
       </section> */}
-    </section>
-  );
+      </section>
+    );
+  }
 }

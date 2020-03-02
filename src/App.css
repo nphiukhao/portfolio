@@ -11,9 +11,10 @@ font-family: 'Didact Gothic', sans-serif;
   padding: 0px;
   /* color: #D6D6D6; */
 }
+
 /* -------------------------- Nav stuff -------------------------- */
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 nav {
@@ -188,6 +189,7 @@ main {
 
 h2 {
   font-family: "Share Tech", sans-serif;
+  font-size: 30px;
   padding: 20px;
 }
 
@@ -206,6 +208,7 @@ h2 {
 
 .project-container {
   background-color: #573d3d;
+  width: 100%;
 }
 
 p {
@@ -224,21 +227,21 @@ p {
 /* ------------------------ projects --------------------------*/
 img {
   width: 100%;
-  padding: 20px 5px;
+  /* padding: 20px 5px; */
 }
 
-.mobilescreenshot {
+/* .mobilescreenshot {
   width: 40%;
-}
+} */
 
 h3 {
-  font-family: "Didact Gothic", sans-serif;
-  font-size: 20px;
+  font-family: "Share Tech", sans-serif;
+  font-size: 32px;
   color: #c4aaaa;
   margin: 15px auto;
   padding-top: 50px;
   padding-bottom: 6px;
-  border-bottom: 1px solid #c4aaaa;
+  /* border-bottom: 1px solid #c4aaaa; */
 }
 
 /* .project1{
@@ -267,6 +270,10 @@ h3 {
   background-color: #c4aaaa;
   color: #3d3d3d;
   transition: all ease-in-out 300ms;
+}
+
+.project-info{
+  padding-bottom: 30px;
 }
 
 /* -------------------- footer --------------------------*/
@@ -319,9 +326,7 @@ footer > .contact-links {
     font-size: 30px;
   }
 
-  h3 {
-    font-size: 25px;
-  }
+
   .nav-links {
     top: 7vh;
     background-color: #8a6060;
@@ -403,9 +408,6 @@ footer > .contact-links {
     height: 450px;
     width: auto;
   }
-  h3 {
-    font-size: 28px;
-  }
 
   .projectLinks a {
     width: 15%;
@@ -422,6 +424,8 @@ footer > .contact-links {
     width: 100%;
   }
   .project-info {
-    width: 1230px;
+    width: 1000px;
+    margin: auto;
+    padding-bottom: 50px;
   }
 }

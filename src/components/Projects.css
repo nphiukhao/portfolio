@@ -1,0 +1,180 @@
+
+.slider-container {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 5px;
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.fullscreenshot{
+  height: auto;
+  width: 100%;
+}
+
+.mobilescreenshot {
+  height: 300px;
+  width: auto;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  /* height: 300px; */
+  margin-right: 50px;
+  border-radius: 10px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  padding-top: 50px; /* //need because a href moves to top of div */
+}
+
+.slider-container a {
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  background: white;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 15px 5px;
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+
+}
+.card {
+  width: 300px;
+  height: 300px;
+  /* border: white solid 1px; */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 25px 0;
+  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.34),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover {
+  box-shadow: 0 0px 70px 0 rgba(0, 0, 0, 0.34),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  width: 310px;
+  height: 310px;
+  transition: 0.3s;
+}
+.card-button {
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.card-img {
+  /* background: grey; */
+  height: 70%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.card-img img {
+  height: 100%;
+  width: auto;
+}
+
+.card-text {
+  height: 30%;
+  text-align: left;
+  padding: 5px 0;
+}
+.card-text > h4 {
+  color: white;
+  font-size: 20px;
+  font-family: "Share Tech", sans-serif;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.card-text p {
+  font-family: "Didact Gothic", sans-serif;
+  line-height: 1.2;
+  width: 100%;
+  font-size: 13px;
+  padding: 0 5px 5px 10px;
+}
+
+.card-icon {
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .card{
+    width: 400px;
+    height: 350px;
+  }
+  .card:hover {
+    box-shadow: 0 0px 70px 0 rgba(0, 0, 0, 0.34),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    width: 410px;
+    height: 360px;
+  }
+  .close {
+    margin-right: 15px;
+  }
+
+  .card-text > h4 {
+    font-size: 25px;
+
+  }
+  
+  .card-text p {
+    font-size: 17px;
+  }
+
+  .mobilescreenshot {
+    height: 500px;
+    width: auto;
+  }
+  
+}
+
+
+@media (min-width: 950px) {
+
+  .card-container {
+    display: grid;
+    width: 900px;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+  .card-button {
+    margin: auto;
+  }
+
+  /* .fullscreenshot{
+    height: 500px;
+    width: auto;
+  } */
+  
+}
