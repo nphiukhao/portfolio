@@ -25,7 +25,7 @@ export default class NavBar extends Component {
             </a>
           </li>
           <li>
-            <a href="https://drive.google.com/open?id=1D828Q-db4s4tW25hepas-gE8xMWoAkEC" target="_blank" rel="noopener noreferrer" onClick={() => this.setState({ active: false })}>
+            <a href="https://drive.google.com/file/d/19Ka7QA6Oet-UfQQNATPJAbHdC-M69h2M/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={() => this.setState({ active: false })}>
               Resume
             </a>
           </li>
